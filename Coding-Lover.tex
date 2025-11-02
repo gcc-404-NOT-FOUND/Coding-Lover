@@ -1,0 +1,68 @@
+\documentclass[12pt,UTF8]{article}
+
+\usepackage[twoside,a4paper,left=1in,right=1in,top=1.5in,bottom=1.5in]{geometry}
+\usepackage{indentfirst}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{hyperxmp}
+
+\hypersetup{
+colorlinks=true,urlcolor=blue,%杂项结束，我要开始装逼了
+%pdf元数据
+pdftitle={Coding Lover},%作品标题
+pdfsubject={Hobbies and Interests},%作品主题
+pdfauthor={gcc-404-NOT-FOUND},%作者是我
+pdfkeywords={兴趣,Interests,Hobbies,爱好,编程,Code},%搜索关键词
+pdfcreator={Overleaf},%创建工具是Overleaf
+pdfproducer={TeX Live 2025},%编译器使用TeX Live 2025
+pdfcreationdate={\today},%修改日期：编译时的那天
+pdfcopyright={Copyright (c) 2025 by gcc-404-NOT-FOUND.文章为gcc-404-NOT-FOUND原创，未经允许不可转卖或盗用。This article is originally written by gcc-404-NOT-FOUND. Unauthorized resale or misappropriation is prohibited.},%免责声明
+pdfversion={v1.2.1}%版本号
+}
+
+\newcommand{\codebox}[1]{\colorbox{gray!10}{\texttt{\textcolor{gray!80}{#1}}}} %代码用\codebox{}封装起来
+\renewcommand{\title}[1]{{\centering \Huge{\textbf{\textsf{#1}}}\\}} %用\title{}打印主标题
+\newcommand{\subtitle}[1]{{\RaggedLeft \Large{\textsf{------#1}}\par}} %用\subtitle{}打印副标题
+
+%页眉页脚
+\fancyhf{}
+
+\fancyhead[C]{\Large{\LaTeX}}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CO]{Source code:\url{https://github.com/gcc-404-NOT-FOUND/Coding-Lover}}
+
+\pagestyle{fancy}
+
+%=============================================================
+
+\begin{document}
+
+\title{Coding Lover}
+\subtitle{Hobbies and Interests}
+
+\section{Beginning}
+While most teenagers chase fleeting trends, I found my obsession in the cold logic of code—where every semicolon echoes with purpose.
+\section{History}
+I was first introduced to programming on September 1, 2023, when I started learning Scratch. Later, in September 2024, during my first IT lab class, I encountered the C++ language. From wrestling with pointer arithmetic in C++ to crafting typeset masterpieces with LaTeX, each segment of memory allocation became a personal playground. My inaugural open-source project\footnote{Project URL: \url{https://github.com/gcc-404-NOT-FOUND/Red-Star-over-China}} documented a political classic through LaTeX—typesetting became my silent protest against mediocre formatting.
+\section{Why do I love}
+Throughout my learning journey, I’ve adhered to the principle: If I can’t afford it or it’s not available, I’ll make it myself. I often spend at least three hours in one sitting while coding. I truly enjoy the sense of control over how the code runs and the output it produces. Every time I update my code, I feel a great sense of accomplishment.
+\section{Ending}
+In summary, programming is the only hobby I’ve consistently pursued for over a year. I’m currently learning C++, LaTeX, and Python. Find me reverse-engineering life’s stack trace at GitHub, where pull requests speak louder than platitudes. Oh, you haven't subscribed my GitHub account \url{https://github.com/gcc-404-NOT-FOUND} yet,right?
+
+\AddToShipoutPictureBG{%水印
+    \AtPageLowerLeft{%
+        \rotatebox{60}{%
+            \makebox[\paperwidth]{%
+                \textcolor{gray!15}{\scalebox{2.7}{\Huge \texttt{gcc-404-NOT-FOUND}}} % 降低透明度，调整大小
+            }%
+        }%
+    }%
+}
+
+\end{document}
